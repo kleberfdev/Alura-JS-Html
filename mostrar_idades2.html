@@ -1,18 +1,18 @@
 <meta charset="UTF-8">
 <script>
 
-function pulaLinha {
-    document.write("<br>"+"<hr>"+"<br>");//EX-01 e EX-02
-}
+    function pulaLinha() {
+        document.write("<br>" + "<hr>" + "<br>");//EX-01 e EX-02
+    }
 
-mostra(frase) {
-    document.write("<big>" + frase + "</big>");//EX-03
-    pulaLinha();
-}
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");//EX-03
+        pulaLinha();
+    }
 
-var ano = 2019;
-mostra("Eu nasci em : " + (ano - 25));
-mostra("Adriano nasceu em : " + (ano - 26));
-mostra("Paulo nasceu em : " + (ano - 32));
+    var ano = 2019;
+    mostra("Eu nasci em : " + (ano - 25));
+    mostra("Adriano nasceu em : " + (ano - 26));
+    mostra("Paulo nasceu em : " + (ano - 32));
 
 </script>
