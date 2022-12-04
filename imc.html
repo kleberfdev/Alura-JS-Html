@@ -9,13 +9,13 @@
         pulaLinha();
     }
     var nome = prompt("Digite seu nome: ")
-    var peso = Number(prompt("Digite seu peso: "))
-    var altura = Number(prompt("Digite sua altura: "))
+    var peso = Number(prompt("Kleber digite seu peso: "))
+    var altura = Number(prompt("Agora digite sua altura: "))
     function calculaimc(peso, altura){
         var imc = peso / (altura * altura)
-        mostra("Olá " + nome + ", Seu IMC é de " + imc.toFixed(2))
+        textofinal = mostra("Olá " + nome + ", Seu IMC é de " + imc.toFixed(2))
         mostra("Concluído")
     }
-    calculaimc(peso, altura)
+calculaimc(peso, altura)
     
 </script>
