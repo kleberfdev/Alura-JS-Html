@@ -1,21 +1,18 @@
 <meta charset="UTF-8">
-
 <script>
-    function pulaLinha() {
-        document.write("<br>");
+var loginCadastrado = "alura";
+var senhaCadastrada = "alura321";
+var cont = 1
+while(cont <= 3) {
+ var loginInformado = prompt("Informe seu login");
+ var senhaInformada = prompt("Informe sua senha");
+  if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+    alert("Bem-vindo ao sistema " + loginInformado);
+    cont = 3
+} else {
+    alert("Login inválido. Tente novamente. Você tem mais " + (3 - cont) + " tentativas");
     }
-
-    function mostra(frase) {
-        document.write(frase);
-        pulaLinha();
-    }
-
-    var idade = parseInt(prompt("Qual é sua idade?"));
-    var temCarteira = prompt("Tem carteira? Responda S ou N");
-    if (idade >= 18 && temCarteira == "S"){
-        mostra("Pode Dirigir")
-    } else {
-        mostra("Não pode dirigir")
-    }
-
+cont++
+}
 </script>
+
