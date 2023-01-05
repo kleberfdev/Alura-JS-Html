@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body{
+      background: seagreen;
+      color: white;
+      text-align: center;
+    }
+    input,label,#btn {
+      width: 280px;
+      height: 40px;
+      border-radius: 15px;
+      
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>contas a apagar</title>
+</head>
+
+<body>
+<h1>CONTAS A APAGAR LISTA </h1>
+
+<fieldset>
+  <legend>
+    LISTA DE CONTAS
+  </legend>
+  <label for="Descrição:">Descrição:</label><br>
+  <input type="text" id="descricao" required><br><br>
+  <label for="valor ">valor R$</label> <br>
+  <input type="text" id="valor" required>
+  
+  <br><br>
+  <input type="button" value="CALCULAR" id="btn">
+  <br>
+  <pre id="outlista"> </pre>
+    <pre id="outcontas"> </pre>
+  
+</fieldset>
+
+<script>
+ var cont = 0
+ var outtotal = 0
+var listaContas = ''
+  function lista(){
+   
+    
+    var descricao = document.getElementById('descricao')
+    var valor = document.getElementById('valor')
+    var outlista = document.getElementById('outlista')
+    var outcontas = document.getElementById('outcontas')
+    
+    var inDescricao = descricao.value
+    var inValor = Number(valor.value)
+ 
+     if(inDescricao == '' || isNaN(inValor)){
+       alert('preencha os corretamente')
+       
+       descricao.value = ''
+       valor.value = ''
+       descricao.focus()
+       
+       return
+     }
+    
+    
+    listaContas = 'Descricao: ...... '+ inDescricao + '\n' + ' total R$ '+ inValor
+    
+    cont++
+    outtotal = inValor += outtotal
+    
+    
+    outlista.textContent +=  listaContas + '\n'
+    outcontas.textContent = 'N° CONTAS '+cont+ '\n' + 'Total R$ '+ outtotal
+    ''
+    
+    descricao.value = ''
+    valor.value = ''
+    descricao.focus()
+    
+  }
+  var btn = document.getElementById('btn')
+  btn.addEventListener('click', lista)
+  
+</script>
+</body>
+
+</html>
