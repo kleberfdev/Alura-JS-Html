@@ -24,14 +24,14 @@
     function desenhaBarra(x, y, serie, cores, texto) {
 
             var altura = serie[0]
-            desenhaTexto(x, y - 10, texto);
-            var a = 1
+            desenhaTexto(x, 10, texto); // e a realmente a necessidade de colocardesenhaTexto(x, y - 10, texto)
+
             for(i= 0; i< serie.length; i++){
 
                 desenhaRetangulo(x, y, 50, altura, cores[i]);
 
                 y = y + serie[i]
-              
+                var a = 1 // colocar a váriavel para antes do laço
                 altura =  serie[a] 
                a++
             }
